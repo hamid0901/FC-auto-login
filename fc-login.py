@@ -32,7 +32,7 @@ while True:
     print(banner)
     print("made by hamid")
     print("email: hamid@gmail.com\n")
-    print("* This project is not unfinished,So only google login is activate *")
+    print("* This project is unfinished,So only google login is activate *")
     print("If it's your first excute, press 1\n")
     print("[#] press 1 to Register an account to auto-login")
     print("[#] press 2 to auto-login")
@@ -71,7 +71,7 @@ while True:
                 usrinput = int(input("> "))
 
                 if 1 <= usrinput <= len(usrlist):
-                    select = usrlist[1-usrinput]
+                    select = usrlist[usrinput-1]
                     usrid = select["id"]
                     usrpw = select["pw"]
                           
