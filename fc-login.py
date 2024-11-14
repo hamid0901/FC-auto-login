@@ -10,7 +10,6 @@ import os
 import time
 
 def clear():
-    # 운영 체제에 따라 화면 지우기
     if os.name == 'nt':  # Windows
         os.system('cls')
     else:  # Linux/Mac
@@ -48,12 +47,11 @@ while True:
             with open("userlist.json", "r") as f:
                 usr = json.load(f)
         else:
-            usr = []  # 파일이 없으면 빈 리스트로 시작
+            usr = []  
 
         newuser = {"id": id, "pw": pw}
         usr.append(newuser)
 
-        # 파일에 사용자 리스트 덮어쓰기
         with open("userlist.json", "w") as f:
             json.dump(usr, f, indent=1)
 
